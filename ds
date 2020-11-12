@@ -1,0 +1,74 @@
+import React, {Component} from 'react'
+import {TextInput, View, Button, Image, Alert, Text} from 'react-native'
+import {styles} from './styles'
+
+class LoginScreen extends Component {
+    login = () => {Alert.alert('Hola')}
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <View style={styles.welcome}>
+                    <View style={styles.welcomeBlock}>
+                        <Text style={styles.title}> Eatkube Restaurantes </Text>
+                        <Image style={styles.image} source={require('../../assets/favicon.ico')}>
+
+                        </Image>
+                    </View>
+                </View>
+                <View style={styles.register}>
+                    <View style={styles.registerForm}>
+                        <TextInput style={styles.inputField} placeholder={'Usuario'}/>
+                        <TextInput style={styles.inputField} placeholder={'Contraseña'} secureTextEntry={true}/>
+                        <Button title='Entrar' onPress={this.login} />
+                    </View>
+                    
+                </View>
+            </View>
+
+            /*<View style={styles.container}>
+                {/!*Espacio*!/}
+                <View style={styles.espacios}>
+
+
+                </View>
+
+                {/!*Titulo*!/}
+                <View>
+                    <Text> Eatkube Restaurantes</Text>
+                </View>
+
+                {/!*Espacio*!/}
+                <View style={styles.espacios}>
+
+                </View>
+
+                {/!*Logo*!/}
+                <View>
+                    <Image source={require('../../assets/favicon.ico')}>
+
+                    </Image>
+                </View>
+
+                {/!*Espacio*!/}
+                <View style={styles.espacios}>
+
+                </View>
+
+                {/!*Form*!/}
+                <View>
+                    <TextInput placeholder={'Usuario'}/>
+                    <TextInput placeholder={'Contraseña'} secureTextEntry={true}/>
+                    <Button title='Entrar' onPress={this.login} />
+                </View>
+
+                {/!*Espacio*!/}
+                <View style={styles.espacios}>
+
+                </View>
+            </View>*/
+        )
+    }
+}
+
+export default LoginScreen
